@@ -1,0 +1,249 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:renumb"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI" x:Name="hardpage"
+    x:Class="renumb.hard"
+    mc:Ignorable="d" Loaded="hardpage_Loaded">
+    <Page.Resources>
+       
+    	<Storyboard x:Name="scorebordfall">
+    		<DoubleAnimation Duration="0" To="1.014" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="hardscoregrid" d:IsOptimized="True"/>
+    		<DoubleAnimation Duration="0" To="0.947" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="hardscoregrid" d:IsOptimized="True"/>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="hardscoregrid">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="-22.727"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="804.465"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimation Duration="0" To="231.795" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="hardgridtext" d:IsOptimized="True"/>
+    		<DoubleAnimation Duration="0:0:0.5" To="9.09" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="hardreplay" d:IsOptimized="True"/>
+    		<DoubleAnimation Duration="0:0:0.5" To="-4.545" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="hardreplay" d:IsOptimized="True"/>
+    		<DoubleAnimation Duration="0" To="231.795" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="hardquit" d:IsOptimized="True"/>
+    		<DoubleAnimation Duration="0" To="345.42" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="hardquit" d:IsOptimized="True"/>
+    	</Storyboard>
+       
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/hardback.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement HorizontalAlignment="Left" AutoPlay="True" IsLooping="True" Height="100" VerticalAlignment="Top" Width="100" Source="jingle.wav"/>
+        <MediaElement x:Name="sea" HorizontalAlignment="Left"  AutoPlay="True" Height="768" IsLooping="True" VerticalAlignment="Top" Width="1366" Source="Assets/Under the Sea Animation - YouTube_mpeg4.mp4" Opacity="0.2" PlaybackRate="0.5" RealTimePlayback="True" DefaultPlaybackRate="0.5"/>
+        <Image HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Source="Assets/hardback.png" Opacity="0.4"/>
+        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1366" Background="#FF660909" Margin="0,718,0,-50"/>
+        <Image HorizontalAlignment="Left" Height="98" Margin="-10,436,0,0" VerticalAlignment="Top" Width="119" Source="Assets/cloude.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="646" VerticalAlignment="Top" Width="402" Source="Assets/weed1.png" Margin="-12,457,0,-335"/>
+        <Image HorizontalAlignment="Left" Height="580" VerticalAlignment="Top" Width="401" Source="Assets/weed1.png" Margin="1123,449,-158,-261" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="414" VerticalAlignment="Top" Width="634" Source="Assets/weed2.png" Margin="958,406,-226,-52" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="650" VerticalAlignment="Top" Width="328" Source="Assets/weed1.png" Margin="703,505,0,-387"/>
+        <Image HorizontalAlignment="Left" Height="691" VerticalAlignment="Top" Width="277" Source="Assets/weed1.png" Margin="892,552,0,-475"/>
+        <Image HorizontalAlignment="Left" Height="626" VerticalAlignment="Top" Width="322" Source="Assets/weed2.png" Margin="784,529,0,-387"/>
+        <Image HorizontalAlignment="Left" Height="650" VerticalAlignment="Top" Width="328" Source="Assets/weed1.png" Margin="587,505,0,-387"/>
+        <Image HorizontalAlignment="Left" Height="702" VerticalAlignment="Top" Width="374" Source="Assets/weed2.png" Margin="445,473,0,-407"/>
+        <Image HorizontalAlignment="Left" Height="671" VerticalAlignment="Top" Width="378" Source="Assets/weed1.png" Margin="142,484,0,-387"/>
+        <Image HorizontalAlignment="Left" Height="574" VerticalAlignment="Top" Width="281" Source="Assets/weed1.png" Margin="-89,529,0,-335"/>
+        <Image HorizontalAlignment="Left" Height="642" VerticalAlignment="Top" Width="380" Source="Assets/weed1.png" Margin="892,449,0,-323"/>
+
+        <Image x:Name="home" HorizontalAlignment="Left" Height="50" Margin="13,259,0,0" VerticalAlignment="Top" Width="50" Source="Assets/home.png" Stretch="Fill" Tapped="home_Tapped" PointerEntered="home_PointerEntered" PointerExited="home_PointerExited"/>
+        <TextBlock HorizontalAlignment="Left" Margin="6,311,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" FontFamily="25" FontSize="15" TextAlignment="Center" Height="20" Width="62" Foreground="#FF0A0A09"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,44,0,0" TextWrapping="Wrap" Text="Time Left:" VerticalAlignment="Top" FontFamily="25" FontSize="28" TextAlignment="Center" Height="30" Width="128"/>
+        <TextBlock x:Name="harddisplaymin" HorizontalAlignment="Left" Margin="179,45,0,0" TextWrapping="Wrap" Text="mm" VerticalAlignment="Top" FontSize="28" Width="50" FontFamily="Adobe Gothic Std B" Height="30" RenderTransformOrigin="0.909,2.367"/>
+        <TextBlock x:Name="harddispname" HorizontalAlignment="Left" Height="35" Margin="1080,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontFamily="Segoe UI Semilight" FontSize="30" FontWeight="Thin" FontStretch="UltraExpanded"/>
+        <MediaElement x:Name="hardmediatap" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.179,3.104" Margin="18,658,0,0" Visibility="Collapsed" Source="silencer.mp3"/>
+        <Image x:Name="home_Copy" HorizontalAlignment="Left" Height="50" Margin="1021,15,0,0" VerticalAlignment="Top" Width="50" Source="Assets/user.png" Stretch="Fill" Tapped="home_Tapped"/>
+        <Image x:Name="reload" HorizontalAlignment="Left" Height="40" Margin="19,345,0,0" VerticalAlignment="Top" Width="39" Source="Assets/reload.png" Stretch="Fill" Tapped="reload_Tapped" PointerEntered="reload_PointerEntered" PointerExited="reload_PointerExited"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,390,0,0" TextWrapping="Wrap" Text="Reload" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="15" TextAlignment="Center" Height="20" Width="62" Foreground="#FF2E2E2E"/>
+        <MediaElement x:Name="hardtickmedia" IsLooping="True" AutoPlay="False" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1256,297,0,0" Source="tick.mp3" Volume="0.1"/>
+        <MediaElement x:Name="harderrormedia" AutoPlay="False" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1256,421,0,0" Source="bell.mp3"/>
+        <TextBlock x:Name="harddisplaysec" HorizontalAlignment="Left" Margin="243,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Width="50" FontFamily="Adobe Gothic Std B" Height="30">
+    		<Run Text="ss"/>
+    		<LineBreak/>
+    		<Run/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="230,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" Width="27" FontFamily="Adobe Garamond Pro Bold" Height="30" RenderTransformOrigin="0.5,0.5" Text=":&#xA;"/>
+        <Grid HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="451" Margin="422,24,0,0" Background="#FFF38705">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Score " VerticalAlignment="Top" Height="31" Width="197" FontSize="25" FontFamily="Factor" Margin="14,16,0,0" FontWeight="ExtraBold"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="646,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="33" Width="27" FontFamily="Adobe Garamond Pro Bold" Height="30" RenderTransformOrigin="0.5,0.5" Text=":&#xA;"/>
+        <TextBlock x:Name="harddispscore" HorizontalAlignment="Right" Text="00" Margin="0,34,578,699" TextAlignment="Center" FontSize="30" FontFamily="Consolas"/>
+        <TextBlock x:Name="hardextrahit" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="316" Margin="525,625,0,0" FontSize="25" FontFamily="Hobo Std" TextAlignment="Center">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEE480A"/>
+                    <GradientStop Color="#FF130C10" Offset="0.507"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Image HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="1200" Source="Assets/hardimg1.png" Margin="96,88,0,0" Opacity="0.7"/>
+        <Grid HorizontalAlignment="Center" Height="500" Margin="96,120,70,0" VerticalAlignment="Top" Width="1200">
+            <Grid.Background>
+                <ImageBrush Stretch="Uniform"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="27*"/>
+                <ColumnDefinition Width="26*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="26*"/>
+                <ColumnDefinition Width="32*"/>
+                <ColumnDefinition Width="31*"/>
+                <ColumnDefinition Width="33*"/>
+                <ColumnDefinition Width="34*"/>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="H_1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Foreground="#FFF70909" Tapped="H_1_Tapped" Margin="14,6,0,0" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="1" Foreground="#FFF70909" Tapped="H_2_Tapped" Margin="6,8,0,0" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_20" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Foreground="#FFF70909" Margin="55,6,0,0" Tapped="H_20_Tapped" FontFamily="Segoe UI Light" RenderTransformOrigin="-9.745,0.55" Grid.Row="1"/>
+            <TextBlock x:Name="H_19" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Foreground="#FFF70909" Margin="8,6,0,0" Tapped="H_19_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_18" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="6" Foreground="#FFF70909" Margin="22,6,0,0" Tapped="H_18_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_17" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="5" Foreground="#FFF70909" Margin="49,10,0,0" Tapped="H_17_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_16" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Foreground="#FFF70909" Margin="64,6,0,0" Tapped="H_16_Tapped" FontFamily="Segoe UI Light" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_15" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Foreground="#FFF70909" Margin="2,10,0,0" Tapped="H_15_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_14" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="3" Foreground="#FFF70909" Margin="2,10,0,0" Tapped="H_14_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_13" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="2" Foreground="#FFF70909" Tapped="H_13_Tapped" FontFamily="Segoe UI Light" Grid.Row="1" Margin="0,6,0,0"/>
+            <TextBlock x:Name="H_12" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Foreground="#FFF70909" Grid.Column="1" Tapped="H_12_Tapped" Margin="12,8,0,0" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_11" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Foreground="#FFF70909" Tapped="H_11_Tapped" Margin="16,6,0,0" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_39" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Grid.Row="3" Foreground="#FFF70909" Margin="6,2,0,0" Tapped="H_39_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_38" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="6" Grid.Row="3" Foreground="#FFF70909" Tapped="H_38_Tapped" FontFamily="Segoe UI Light" Margin="20,8,0,0"/>
+            <TextBlock x:Name="H_37" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="5" Grid.Row="3" Foreground="#FFF70909" Margin="47,10,0,0" Tapped="H_37_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_36" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Grid.Row="3" Foreground="#FFF70909" Margin="60,12,0,0" Tapped="H_36_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_35" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Grid.Row="3" Foreground="#FFF70909" Margin="2,10,0,0" Tapped="H_35_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_34" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="3" Grid.Row="3" Foreground="#FFF70909" Margin="0,10,0,0" Tapped="H_34_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_33" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="2" Grid.Row="3" Foreground="#FFF70909" Margin="6,6,0,0" Tapped="H_33_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_32" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="1" Grid.Row="3" Foreground="#FFF70909" Margin="8,0,0,0" Tapped="H_32_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_31" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Row="3" Foreground="#FFF70909" Margin="18,6,0,0" Tapped="H_31_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_40" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="3" Foreground="#FFF70909" Margin="53,2,0,0" Tapped="H_40_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_41" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Row="4" Foreground="#FFF70909" Margin="18,6,0,0" Tapped="H_41_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_42" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="1" Grid.Row="4" Foreground="#FFF70909" Margin="6,2,0,0" Tapped="H_42_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_43" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="2" Grid.Row="4" Foreground="#FFF70909" Margin="4,6,0,0" Tapped="H_43_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_44" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="3" Grid.Row="4" Foreground="#FFF70909" Margin="2,10,0,0" Tapped="H_44_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_45" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Grid.Row="4" Foreground="#FFF70909" Margin="2,8,0,0" Tapped="H_45_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_46" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Grid.Row="4" Foreground="#FFF70909" Margin="60,6,0,0" Tapped="H_46_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_47" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" FontSize="30" TextAlignment="Center" Grid.Column="5" Grid.Row="4" Foreground="#FFF70909" Margin="51,6,0,54" Tapped="H_47_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_48" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="6" Grid.Row="4" Foreground="#FFF70909" Margin="18,6,0,0" Tapped="H_48_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_49" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Grid.Row="4" Foreground="#FFF70909" Margin="10,2,0,0" Tapped="H_49_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_50" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="4" Foreground="#FFF70909" Tapped="H_50_Tapped" FontFamily="Segoe UI Light" Margin="55,0,0,0"/>
+            <TextBlock x:Name="H_29" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Grid.Row="2" Foreground="#FFF70909" Margin="10,6,0,0" Tapped="H_29_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_28" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="6" Grid.Row="2" Foreground="#FFF70909" Tapped="H_28_Tapped" FontFamily="Segoe UI Light" Margin="20,4,0,0"/>
+            <TextBlock x:Name="H_27" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="5" Grid.Row="2" Foreground="#FFF70909" Margin="49,4,0,0" Tapped="H_27_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_26" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Grid.Row="2" Foreground="#FFF70909" Margin="62,8,0,0" Tapped="H_26_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_25" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Grid.Row="2" RenderTransformOrigin="0.58,0.52" Foreground="#FFF70909" Margin="2,10,0,0" Tapped="H_25_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_24" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="3" Grid.Row="2" Foreground="#FFF70909" Margin="0,10,0,0" Tapped="H_24_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_23" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="2" Grid.Row="2" Foreground="#FFF70909" Margin="4,6,0,0" Tapped="H_23_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_22" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="1" Grid.Row="2" Foreground="#FFF70909" Margin="10,10,0,0" Tapped="H_22_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_21" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Row="2" Foreground="#FFF70909" Margin="16,6,0,0" Tapped="H_21_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_30" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="2" Foreground="#FFF70909" Margin="51,4,0,0" Tapped="H_30_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_10" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Foreground="#FFF70909" Tapped="H_10_Tapped" Margin="53,8,0,0" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_8" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="6" Foreground="#FFF70909"  Margin="20,10,0,0" FontFamily="Segoe UI Light" Tapped="H_8_Tapped"/>
+            <TextBlock x:Name="H_7" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="5" Foreground="#FFF70909"  Margin="49,10,0,0" FontFamily="Segoe UI Light" Tapped="H_7_Tapped"/>
+            <TextBlock x:Name="H_6" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Foreground="#FFF70909"  Margin="58,8,0,0" FontFamily="Segoe UI Light" Grid.ColumnSpan="2" Tapped="H_6_Tapped"/>
+            <TextBlock x:Name="H_5" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="4" Foreground="#FFF70909"  Margin="2,10,0,0" FontFamily="Segoe UI Light" Tapped="H_5_Tapped"/>
+            <TextBlock x:Name="H_4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="3" Foreground="#FFF70909"  Margin="2,10,0,0" FontFamily="Segoe UI Light" Tapped="H_4_Tapped"/>
+            <TextBlock x:Name="H_3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="2" Foreground="#FFF70909"  Margin="0,8,0,0" FontFamily="Segoe UI Light" Tapped="H_3_Tapped"/>
+            <TextBlock x:Name="H_9" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Foreground="#FFF70909"  Margin="8,6,0,0" FontFamily="Segoe UI Light" Tapped="H_9_Tapped"/>
+            <TextBlock x:Name="H_51" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Foreground="#FFF70909" Tapped="H_51_Tapped" FontFamily="Segoe UI Light" Grid.Column="7" Margin="12,8,0,0"/>
+            <TextBlock x:Name="H_52" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Foreground="#FFF70909" Tapped="H_52_Tapped" FontFamily="Segoe UI Light" Margin="64,4,0,0" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_53" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Foreground="#FFF70909" Margin="75,12,0,0" Tapped="H_53_Tapped" FontFamily="Segoe UI Light" RenderTransformOrigin="-9.745,0.55" Grid.Row="1"/>
+            <TextBlock x:Name="H_54" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Foreground="#FFF70909" Margin="10,0,0,0" Tapped="H_54_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_55" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Foreground="#FFF70909" Margin="172,4,0,0" Tapped="H_55_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_56" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Foreground="#FFF70909" Margin="112,6,0,0" Tapped="H_56_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_57" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" FontSize="30" TextAlignment="Center" Grid.Column="11" Foreground="#FFF70909" Margin="75,4,0,60" Tapped="H_57_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2" Grid.Row="1"/>
+            <TextBlock x:Name="H_58" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Foreground="#FFF70909" Margin="11,0,0,0" Tapped="H_58_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_59" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="10" Foreground="#FFF70909" Margin="30,0,0,0" Tapped="H_59_Tapped" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_60" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="9" Foreground="#FFF70909" Tapped="H_60_Tapped" Margin="0,8,6,0" FontFamily="Segoe UI Light" Grid.Row="1"/>
+            <TextBlock x:Name="H_61" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Foreground="#FFF70909" Grid.Column="8" Tapped="H_61_Tapped" FontFamily="Segoe UI Light" Grid.Row="1" Margin="62,4,0,0" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_62" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Foreground="#FFF70909" Tapped="H_62_Tapped" Margin="8,4,0,0" FontFamily="Segoe UI Light" Grid.Column="7" Grid.Row="1"/>
+            <TextBlock x:Name="H_63" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Grid.Row="3" Foreground="#FFF70909" Margin="12,2,0,0" Tapped="H_63_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_64" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="3" Foreground="#FFF70909" Tapped="H_64_Tapped" FontFamily="Segoe UI Light" Margin="170,2,0,0"/>
+            <TextBlock x:Name="H_65" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="3" Foreground="#FFF70909" Margin="110,4,0,0" Tapped="H_65_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_66" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Grid.Row="3" Foreground="#FFF70909" Margin="81,0,0,0" Tapped="H_66_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_67" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Grid.Row="3" Foreground="#FFF70909" Margin="11,0,0,0" Tapped="H_67_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_68" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="10" Grid.Row="3" Foreground="#FFF70909" Margin="30,0,0,0" Tapped="H_68_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_69" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1" FontSize="30" TextAlignment="Center" Grid.Column="9" Grid.Row="3" Foreground="#FFF70909" Margin="0,2,6,0" Tapped="H_69_Tapped" FontFamily="Segoe UI Light" Height="36" VerticalAlignment="Top"/>
+            <TextBlock x:Name="H_70" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Grid.Row="3" Foreground="#FFF70909" Tapped="H_70_Tapped" FontFamily="Segoe UI Light" Margin="64,2,0,0" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_71" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Row="3" Foreground="#FFF70909" Margin="8,4,0,0" FontFamily="Segoe UI Light" Grid.Column="7" Tapped="H_71_Tapped"/>
+            <TextBlock x:Name="H_72" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Grid.Row="3" Foreground="#FFF70909" Margin="81,6,-8,0" Tapped="H_72_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_73" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Row="4" Foreground="#FFF70909" Margin="8,2,0,0" Tapped="H_73_Tapped" FontFamily="Segoe UI Light" Grid.Column="7"/>
+            <TextBlock x:Name="H_74" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="8" Grid.Row="4" Foreground="#FFF70909" Tapped="H_74_Tapped" FontFamily="Segoe UI Light" Margin="66,2,0,0" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_75" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="9" Grid.Row="4" Foreground="#FFF70909" Margin="0,0,10,0" Tapped="H_75_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_76" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="10" Grid.Row="4" Foreground="#FFF70909" Margin="30,0,0,0" Tapped="H_76_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_77" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Grid.Row="4" Foreground="#FFF70909" Margin="11,0,0,0" Tapped="H_77_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_78" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Grid.Row="4" Foreground="#FFF70909" Margin="81,0,0,0" Tapped="H_78_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_79" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="4" Foreground="#FFF70909" Margin="108,2,0,58" Tapped="H_79_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_80" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="4" Foreground="#FFF70909" Margin="176,0,0,0" Tapped="H_80_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_81" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Grid.Row="4" Foreground="#FFF70909" Margin="10,0,0,0" Tapped="H_81_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_82" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Grid.Row="3" Foreground="#FFF70909" Tapped="H_82_Tapped" FontFamily="Segoe UI Light" Margin="75,96,0,0" Grid.RowSpan="2"/>
+            <TextBlock x:Name="H_83" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Grid.Row="2" Foreground="#FFF70909" Margin="14,2,0,0" Tapped="H_83_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_84" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="2" Foreground="#FFF70909" Tapped="H_84_Tapped" FontFamily="Segoe UI Light" Margin="176,2,0,0"/>
+            <TextBlock x:Name="H_85" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Grid.Row="2" Foreground="#FFF70909" Margin="112,6,0,0" Tapped="H_85_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_86" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Grid.Row="2" Foreground="#FFF70909" Margin="75,4,0,0" Tapped="H_86_Tapped" FontFamily="Segoe UI Light" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_87" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Grid.Row="2" RenderTransformOrigin="0.58,0.52" Foreground="#FFF70909" Margin="11,6,0,0" Tapped="H_87_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_88" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="10" Grid.Row="2" Foreground="#FFF70909" Margin="30,2,0,0" Tapped="H_88_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_89" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="9" Grid.Row="2" Foreground="#FFF70909" Margin="0,6,4,0" Tapped="H_89_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_90" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" FontSize="30" TextAlignment="Center" Grid.Column="8" Grid.Row="2" Foreground="#FFF70909" Tapped="H_90_Tapped" FontFamily="Segoe UI Light" Margin="64,8,0,56" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="H_91" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Row="2" Foreground="#FFF70909" Margin="8,4,0,0" Tapped="H_91_Tapped" FontFamily="Segoe UI Light" Grid.Column="7"/>
+            <TextBlock x:Name="H_92" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Grid.Row="2" Foreground="#FFF70909" Margin="75,4,0,0" Tapped="H_92_Tapped" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="H_93" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Foreground="#FFF70909" Margin="77,8,0,0" FontFamily="Segoe UI Light" Tapped="H_93_Tapped"/>
+            <TextBlock x:Name="H_94" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Foreground="#FFF70909"  Margin="170,8,0,0" FontFamily="Segoe UI Light" Tapped="H_94_Tapped"/>
+            <TextBlock x:Name="H_95" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="12" Foreground="#FFF70909"  Margin="110,8,0,0" FontFamily="Segoe UI Light" Tapped="H_95_Tapped"/>
+            <TextBlock x:Name="H_96" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Foreground="#FFF70909"  Margin="71,6,0,0" FontFamily="Segoe UI Light" Grid.ColumnSpan="2" Tapped="H_96_Tapped"/>
+            <TextBlock x:Name="H_97" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="11" Foreground="#FFF70909"  Margin="13,2,0,0" FontFamily="Segoe UI Light" Tapped="H_97_Tapped"/>
+            <TextBlock x:Name="H_98" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="10" Foreground="#FFF70909"  Margin="30,0,0,0" FontFamily="Segoe UI Light" Tapped="H_98_Tapped"/>
+            <TextBlock x:Name="H_99" HorizontalAlignment="Right" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="9" Foreground="#FFF70909"  Margin="0,6,8,0" FontFamily="Segoe UI Light" Tapped="H_99_Tapped"/>
+            <TextBlock x:Name="H_100" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="30" TextAlignment="Center" Grid.Column="15" Foreground="#FFF70909"  Margin="12,6,0,0" FontFamily="Segoe UI Light" Tapped="H_100_Tapped"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Last Hit " VerticalAlignment="Top" Margin="11,431,0,0" FontSize="20" FontFamily="Segoe UI" Foreground="#FF740738" FontWeight="ExtraBold" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="702" VerticalAlignment="Top" Width="374" Source="Assets/weed2.png" Margin="57,549,0,-483"/>
+        <Image HorizontalAlignment="Left" Height="650" VerticalAlignment="Top" Width="328" Source="Assets/weed1.png" Margin="311,545,0,-427"/>
+        <TextBlock x:Name="hardlasthit" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="43,466,0,0" FontSize="30" FontFamily="Segoe UI" Foreground="#FF61032D" FontWeight="ExtraBold" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1366" Margin="-2,720,0,-52" Stretch="Fill" Source="Assets/peb.png" Opacity="0.9"/>
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1366" Margin="0,702,0,-34" Stretch="Fill" Source="Assets/ground1.png" Opacity="0.5"/>
+        <Grid x:Name="hardscoregrid" HorizontalAlignment="Left" Height="768" Margin="0,-827,0,0" VerticalAlignment="Top" Width="1366" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="rolling_dice-1366x768.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <TextBlock x:Name="hardgridtext" HorizontalAlignment="Left" Height="243" Margin="239,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="648" FontFamily="Segoe UI Semilight" FontSize="30" TextAlignment="Center" Foreground="#FF3C1111" FontWeight="ExtraBold" RenderTransformOrigin="0.5,0.5" Text="Still great, Taking you to next level :)">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+
+            <Button x:Name="hardquit" Content="Quit" HorizontalAlignment="Left" Height="39" Margin="855,451,0,0" VerticalAlignment="Top" Width="122" Click="quit_Click" Foreground="#FFF90808" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                <Button.RenderTransform>
+                    <CompositeTransform/>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="hardreplay" Content="Replay" HorizontalAlignment="Left" Height="59" Margin="981,628,0,0" VerticalAlignment="Top" Width="182" FontSize="20" Click="replay_Click" Foreground="#FF300A0A" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <CompositeTransform/>
+                </Button.RenderTransform>
+            </Button>
+            <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+            <Button Content="Next Level" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="664,411,0,0" FontSize="25" Foreground="#FF4ADA20" Background="#FF3660F0" Click="Button_Click_1"/>
+        </Grid>
+    </Grid>
+
+</Page>

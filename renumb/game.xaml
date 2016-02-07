@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="renumb.game"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:renumb"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/gameback.png" Stretch="None"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Height="68" Margin="181,189,0,0" TextWrapping="Wrap" Text="Player" VerticalAlignment="Top" Width="562" FontSize="50" FontFamily="SketchFlow Print" FontWeight="Bold" Foreground="#FFF9F6F8"/>
+        <Button x:Name="start" Content="Let's START" HorizontalAlignment="Left" Height="118" Margin="531,596,0,0" VerticalAlignment="Top" Width="316" FontSize="36" Click="start_Click"/>
+        <MediaElement x:Name="playmedia2" Volume="0.5" HorizontalAlignment="Left" Height="16" Margin="1170,475,0,0" IsLooping="True" VerticalAlignment="Top" Width="24" Source="game.mp3" Visibility="Collapsed"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Welcome !!" VerticalAlignment="Top" FontSize="30" FontFamily="Segoe Print" Margin="83,124,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Height="135" Margin="282,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="787" FontSize="50" FontFamily="SketchFlow Print" FontWeight="Bold" Foreground="#FFF9F6F8">
+        	<Run Text="Take your breath"/>
+        	<Run Text=" and start"/>
+        </TextBlock>
+
+    </Grid>
+</Page>

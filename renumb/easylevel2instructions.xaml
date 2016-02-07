@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="renumb.easylevel2instructions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:renumb"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FFF9E304">
+        <TextBlock HorizontalAlignment="Left" Height="366" Margin="366,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="726" FontSize="30" Foreground="#FF0C0B0B">
+        	<Run Text="Hi,"/>
+        	<LineBreak/>
+        	<Run Text="&#x9;Here in this"/>
+        	<Run Text=" level your remembering skill is tested. Here we have a set of numbers to remember. Rolling will make the numbers disappear and you should spot the correct place of the numbers"/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="&#x9;Go on........."/>
+        </TextBlock>
+        <Button x:Name="easylevel2continue" Content="Continue" HorizontalAlignment="Left" Height="86" Margin="834,504,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF040404" FontSize="30" BorderBrush="#FF0A0909" Click="easylevel2continue_Click"/>
+
+    </Grid>
+</Page>
